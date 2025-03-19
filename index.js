@@ -8,7 +8,8 @@ async function crawl() {
   try {
     const { data } = await axios.get(url, {
       headers: {
-        "User-Agent": process.env.USER_AGENT, 
+        "User-Agent": process.env.USER_AGENT,
+      },
     });
     const $ = cheerio.load(data);
     console.log($);
