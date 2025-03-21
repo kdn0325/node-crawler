@@ -12,7 +12,7 @@ async function crawl() {
       },
     });
     const $ = cheerio.load(data);
-    console.log($);
+    console.log($.html());
     const stores = [];
 
     $("tbody tr").each((index, element) => {
